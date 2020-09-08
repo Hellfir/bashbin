@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+##where to run the script from
+
+set -e
+#if anything fails, exit
+
+#battery info locations, edit for your own PC
+current1=$( cat /sys/class/power_supply/BAT0/energy_now )
+current2=$( cat /sys/class/power_supply/BAT1/energy_now )
+full1=$( cat /sys/class/power_supply/BAT0/energy_full )
+full2=$( cat /sys/class/power_supply/BAT1/energy_full )
+current=$(expr $current1 + $current2)
+full=$(expr $full1 + $full2)
+current=$((current*100))
+percent=$(expr $current / $full)
+echo "$percent% battery remaining"

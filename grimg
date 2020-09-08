@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -e
+
+#screensize = 1366x768
+#x + dimX = 1366
+#y + dimY = 768
+
+if [ $1 = -f ] 
+then
+	grim -g "0,20 1366x748" $2
+fi
+if [ $1 = -h ]
+then
+	if [ $2 = "l" ]
+	then
+		grim -g "0,20 683x748" $3
+	fi
+	if [ $2 = "r" ]
+	then
+		grim -g "683,20 683x748" $3
+	fi
+fi

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -e
+#gets the specific line of a file.
+# $getline 7 [file]
+#($@ gets all arguments given in the command called)
+# $# gives argument #1, #2 etc
+# ${list: start elem}
+
+if [ $1 = -m ]
+then
+	for f in "${@:4}"; do
+		head -n $3 $f | tail -n $(expr $3 - $2 + 1)
+	done
+else
+	for f in "${@:2}"; do
+		head -n $1 $f | tail -n 1
+	done
+fi
