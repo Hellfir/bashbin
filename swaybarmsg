@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
-power=$( power -s )
+#power=$( power -s )
 date=$( date +'%a %Y-%m-%d %H:%M:%S %p' )
-echo "BAT $power | $date"
+
+echo "$date"
+
+#laptop
+#echo "BAT $power | $date"

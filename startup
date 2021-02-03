@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+steam &
+zim &
+firefox &

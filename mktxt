@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+#takes any number of files as arguments, and appends them with ".txt"
+
 for f in $*
 do
 	mv "$f" "$f".txt
