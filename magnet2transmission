@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
+#install transmission-cli and mako
+#ensure the IP is correct.
 transmission-remote 192.168.1.190 -a $@
 notify-send -t 3000 'Magnet link' 'Torrent uploaded.'
