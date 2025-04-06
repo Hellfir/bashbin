@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 #install transmission-cli and mako
 #ensure the IP is correct.
+#To use in firefox:
+#go to "about:config", create a bool called "network.protocol.handler.expose.magnet" and set it to "False", then click on a magnet link, and set it to use this file.
 transmission-remote 192.168.1.190 -a $@
 notify-send -t 3000 'Magnet link' 'Torrent uploaded.'
